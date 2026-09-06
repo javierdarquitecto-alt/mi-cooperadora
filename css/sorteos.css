@@ -1,0 +1,390 @@
+.sorteos {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.sorteos__header h1 {
+    margin: 6px 0;
+}
+
+
+.sorteos__header p {
+    margin: 0;
+    color: #777;
+}
+
+
+.sorteos__eyebrow {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #fff1e8;
+    color: #d87543;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+/* ======================================================
+   CARDS
+====================================================== */
+
+.sorteos-card {
+    background: #fff;
+    border: 1px solid #f0e7e2;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow:
+        0 4px 18px
+        rgba(0, 0, 0, 0.04);
+}
+
+
+.sorteos-card__header {
+    margin-bottom: 20px;
+}
+
+
+.sorteos-card__header h2 {
+    margin: 0 0 5px;
+}
+
+
+.sorteos-card__header p {
+    margin: 0;
+    color: #777;
+}
+
+
+/* ======================================================
+   RESUMEN
+====================================================== */
+
+.sorteos-resumen {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+
+.sorteos-resumen--detalle {
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+    margin-bottom: 25px;
+}
+
+
+.sorteos-resumen-card {
+    background: #fff;
+    border: 1px solid #f0e7e2;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+
+.sorteos-resumen-card span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+
+.sorteos-resumen-card strong {
+    color: #333;
+    font-size: 20px;
+}
+
+
+/* ======================================================
+   FORMULARIOS
+====================================================== */
+
+.sorteos-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+.sorteos-descripcion {
+    grid-column: span 2;
+}
+
+
+.sorteos__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+}
+
+
+.sorteos__actions button,
+.sorteos-finalizar button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #e88d5b;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ======================================================
+   ESTADOS
+====================================================== */
+
+.sorteos-estado {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.sorteos-estado--activo {
+    background: #e7f6ec;
+    color: #367d4c;
+}
+
+
+.sorteos-estado--pendiente {
+    background: #fff0e6;
+    color: #b96b3f;
+}
+
+
+.sorteos-estado--finalizado {
+    background: #eeeeee;
+    color: #666;
+}
+
+
+/* ======================================================
+   DETALLE
+====================================================== */
+
+.sorteos-detalle {
+    border-top: 4px solid #e88d5b;
+}
+
+
+.sorteos-detalle-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+.sorteos-subseccion {
+    border-top: 1px solid #eee5df;
+    padding-top: 24px;
+    margin-top: 24px;
+}
+
+
+.sorteos-subseccion h3 {
+    margin-top: 0;
+}
+
+
+.sorteos-numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    padding: 7px 10px;
+    background: #fff1e8;
+    color: #c96f3e;
+    border-radius: 9px;
+}
+
+
+/* ======================================================
+   ACCIONES
+====================================================== */
+
+.sorteos-acciones-tabla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+
+.sorteos-acciones-tabla button,
+.sorteos-btn-secundario {
+    border: 1px solid #eadfd9;
+    background: #fff;
+    border-radius: 7px;
+    padding: 6px 9px;
+    cursor: pointer;
+}
+
+
+.sorteos-acciones-tabla button:hover,
+.sorteos-btn-secundario:hover {
+    background: #fff5ef;
+}
+
+
+.sorteos-btn-eliminar {
+    color: #a94442;
+}
+
+
+/* ======================================================
+   FINALIZAR
+====================================================== */
+
+.sorteos-finalizar {
+    background: #faf7f5;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+
+.sorteos-finalizar__acciones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.sorteos-finalizar__acciones input {
+    max-width: 180px;
+}
+
+
+.sorteos-finalizado {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background: #f4f4f4;
+    padding: 16px 18px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+
+.sorteos-vacio {
+    padding: 30px;
+    text-align: center;
+    color: #888;
+    background: #faf7f5;
+    border-radius: 12px;
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1100px) {
+
+    .sorteos-resumen,
+    .sorteos-resumen--detalle {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .sorteos-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sorteos-resumen,
+    .sorteos-resumen--detalle,
+    .sorteos-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .sorteos-descripcion {
+        grid-column: auto;
+    }
+
+
+    .sorteos-detalle-header,
+    .sorteos-finalizado,
+    .sorteos-finalizar__acciones {
+        flex-direction: column;
+    }
+
+}
+/* ======================================================
+   CORRECCIÓN BOTONES DE ACCIONES - SORTEOS
+====================================================== */
+
+.sorteos-acciones-tabla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+}
+
+
+.sorteos-acciones-tabla button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    min-width: auto;
+
+    padding: 7px 10px;
+
+    border: 1px solid #eadfd9;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #555555 !important;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+
+.sorteos-acciones-tabla button:hover {
+    background: #fff3ec;
+
+    border-color: #e88d5b;
+
+    color: #d56f3a !important;
+}
+
+
+.sorteos-acciones-tabla .sorteos-btn-eliminar {
+    color: #b54848 !important;
+}
+
+
+.sorteos-acciones-tabla .sorteos-btn-eliminar:hover {
+    background: #fff0f0;
+
+    border-color: #d9a1a1;
+
+    color: #9e3030 !important;
+}

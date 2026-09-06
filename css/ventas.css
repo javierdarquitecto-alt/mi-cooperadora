@@ -1,0 +1,331 @@
+.ventas {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.ventas__header {
+    margin-bottom: 4px;
+}
+
+
+.ventas__header h1 {
+    margin: 6px 0;
+}
+
+
+.ventas__eyebrow {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    background: #fff1e8;
+
+    color: #d87543;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+
+.ventas-card {
+    background: white;
+
+    border: 1px solid #f0e7e2;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(0, 0, 0, 0.04);
+}
+
+
+.ventas-card__header {
+    margin-bottom: 20px;
+}
+
+
+.ventas-card__header h2 {
+    margin: 0 0 5px 0;
+}
+
+
+.ventas-card__header p {
+    margin: 0;
+
+    color: #777;
+}
+
+
+.ventas-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+.ventas__actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 22px;
+}
+
+
+.ventas__actions button {
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #e88d5b;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.ventas__actions button:hover {
+    opacity: 0.9;
+}
+
+
+.ventas-vacio {
+    padding: 30px;
+
+    text-align: center;
+
+    color: #888;
+
+    background: #faf7f5;
+
+    border-radius: 12px;
+}
+
+
+.ventas-estado {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.ventas-estado--ok {
+    background: #e7f6ec;
+
+    color: #367d4c;
+}
+
+
+.ventas-estado--pendiente {
+    background: #fff0e6;
+
+    color: #b96b3f;
+}
+
+
+@media (max-width: 900px) {
+
+    .ventas-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .ventas-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+/* =========================================================
+   RESUMEN
+========================================================= */
+
+.ventas-resumen {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+
+.ventas-resumen-card {
+    background: #ffffff;
+    border: 1px solid #f0e7e2;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+
+.ventas-resumen-card span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+
+.ventas-resumen-card strong {
+    font-size: 20px;
+    color: #333;
+}
+
+
+/* =========================================================
+   ACCIONES DE TABLA
+========================================================= */
+
+.ventas-acciones-tabla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+
+.ventas-acciones-tabla button {
+    border: 1px solid #eadfd9;
+    background: #fff;
+    border-radius: 7px;
+    padding: 6px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+.ventas-acciones-tabla button:hover {
+    background: #fff5ef;
+}
+
+
+.ventas-acciones-tabla .ventas-btn-eliminar {
+    color: #a94442;
+}
+
+
+.ventas-btn-secundario {
+    background: #eee !important;
+    color: #555 !important;
+}
+
+
+.ventas-observaciones {
+    grid-column: span 2;
+}
+
+
+@media (max-width: 1100px) {
+
+    .ventas-resumen {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .ventas-resumen {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ventas-observaciones {
+        grid-column: auto;
+    }
+
+}
+/* =========================================================
+   CORRECCIÓN BOTONES DE ACCIONES - VENTAS
+========================================================= */
+
+.ventas-acciones-tabla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+}
+
+
+.ventas-acciones-tabla button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    min-width: auto;
+
+    padding: 7px 10px;
+
+    border: 1px solid #eadfd9;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #555555 !important;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+
+.ventas-acciones-tabla button:hover {
+    background: #fff3ec;
+
+    border-color: #e88d5b;
+
+    color: #d56f3a !important;
+}
+
+
+.ventas-acciones-tabla .ventas-btn-eliminar {
+    color: #b54848 !important;
+}
+
+
+.ventas-acciones-tabla .ventas-btn-eliminar:hover {
+    background: #fff0f0;
+
+    border-color: #d9a1a1;
+
+    color: #9e3030 !important;
+}

@@ -1,0 +1,442 @@
+/* ==========================================================
+   MI COOPERADORA
+   CAJA - AJUSTE VISUAL
+   ========================================================== */
+
+
+/* CONTENEDOR */
+
+.caja {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   TARJETAS DE RESUMEN
+   ========================================================== */
+
+.caja__resumen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+
+.caja__resumen > div {
+    position: relative;
+    overflow: hidden;
+
+    padding: 22px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e6e8;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.045);
+}
+
+
+/* Línea superior */
+
+.caja__resumen > div::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+}
+
+
+/* INGRESOS */
+
+.caja__resumen > div:nth-child(1)::before {
+    background: #62b58c;
+}
+
+.caja__resumen > div:nth-child(1) strong {
+    color: #27815d;
+}
+
+
+/* EGRESOS */
+
+.caja__resumen > div:nth-child(2)::before {
+    background: #dc8b8b;
+}
+
+.caja__resumen > div:nth-child(2) strong {
+    color: #a85050;
+}
+
+
+/* SALDO */
+
+.caja__resumen > div:nth-child(3) {
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f2,
+            #ffffff
+        );
+
+    border-color: #efd4c6;
+}
+
+.caja__resumen > div:nth-child(3)::before {
+    background: #ed855d;
+}
+
+.caja__resumen > div:nth-child(3) strong {
+    color: #db6c42;
+}
+
+
+/* Etiquetas */
+
+.caja__resumen span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #72797f;
+
+    font-size: 13px;
+}
+
+
+/* Importes */
+
+.caja__resumen strong {
+    display: block;
+
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+
+/* ==========================================================
+   BUSCADOR
+   ========================================================== */
+
+.caja__busqueda {
+    margin-bottom: 22px;
+
+    padding: 20px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e7;
+    border-radius: 16px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.04);
+}
+
+
+.caja__busqueda input {
+    min-height: 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe2e4;
+    border-radius: 10px;
+}
+
+
+.caja__busqueda input:focus {
+    border-color: #e9865d;
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(233,134,93,.11);
+}
+
+
+/* ==========================================================
+   MOVIMIENTOS
+   ========================================================== */
+
+.caja__movimientos {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e7;
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.045);
+}
+
+
+.caja__movimientos h2 {
+    margin: 0;
+
+    padding: 20px 24px;
+
+    background: #fffaf7;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 19px;
+}
+
+
+/* ==========================================================
+   TABLA
+   ========================================================== */
+
+.caja table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.caja thead {
+    background: #fafafa;
+}
+
+
+.caja th {
+    padding: 12px 15px;
+
+    color: #806d63;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: .055em;
+}
+
+
+.caja td {
+    padding: 14px 15px;
+
+    border-top: 1px solid #eeeeee;
+
+    font-size: 13px;
+}
+
+
+.caja tbody tr:hover {
+    background: #fffaf7;
+}
+
+
+/* TIPO DE MOVIMIENTO */
+
+.caja td:nth-child(2) {
+    font-weight: 700;
+}
+
+
+/* Ingreso */
+
+.caja td:nth-child(2) {
+    color: #27815d;
+}
+
+
+/* IMPORTE */
+
+.caja td:nth-child(4) {
+    color: #252b30;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   BOTÓN NUEVO MOVIMIENTO
+   ========================================================== */
+
+.caja [data-action="nuevo-movimiento"],
+.caja #nuevo-movimiento {
+    min-height: 42px;
+
+    padding: 0 19px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(233,134,93,.18);
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 750px) {
+
+    .caja__resumen {
+        grid-template-columns: 1fr;
+    }
+
+
+    .caja__movimientos {
+        overflow-x: auto;
+    }
+
+
+    .caja table {
+        min-width: 700px;
+    }
+
+}
+/* ==========================================================
+   CAJA - CORRECCION DE SELECTORES
+   ========================================================== */
+
+
+/* TARJETAS */
+
+.caja__resumen .caja-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 22px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e6e8;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.045);
+}
+
+
+.caja__resumen .caja-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+}
+
+
+/* INGRESOS */
+
+.caja__resumen .caja-card:nth-child(1)::before {
+    background: #62b58c;
+}
+
+
+.caja__resumen .caja-card:nth-child(1) strong {
+    color: #27815d;
+}
+
+
+/* EGRESOS */
+
+.caja__resumen .caja-card:nth-child(2)::before {
+    background: #dc8b8b;
+}
+
+
+.caja__resumen .caja-card:nth-child(2) strong {
+    color: #a85050;
+}
+
+
+/* SALDO */
+
+.caja__resumen .caja-card:nth-child(3) {
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f2,
+            #ffffff
+        );
+
+    border-color: #efd4c6;
+}
+
+
+.caja__resumen .caja-card:nth-child(3)::before {
+    background: #ed855d;
+}
+
+
+.caja__resumen .caja-card:nth-child(3) strong {
+    color: #db6c42;
+}
+
+
+/* ETIQUETAS */
+
+.caja__resumen .caja-card span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #72797f;
+
+    font-size: 13px;
+}
+
+
+/* IMPORTES */
+
+.caja__resumen .caja-card strong {
+    display: block;
+
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+
+/* BUSCADOR REAL */
+
+.caja__filtros {
+    margin-bottom: 22px;
+
+    padding: 20px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e7;
+    border-radius: 16px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.04);
+}
+
+
+.caja__filtros input {
+    min-height: 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe2e4;
+    border-radius: 10px;
+}
+
+
+.caja__filtros input:focus {
+    border-color: #e9865d;
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(233,134,93,.11);
+}

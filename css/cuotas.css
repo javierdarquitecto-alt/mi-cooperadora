@@ -1,0 +1,305 @@
+/* ==========================================================
+   MI COOPERADORA
+   CUOTAS - AJUSTE VISUAL
+   ========================================================== */
+
+
+/* CONTENEDOR GENERAL */
+
+.cuotas {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   REGISTRAR PAGO
+   ========================================================== */
+
+.cuotas__formulario {
+    overflow: hidden;
+
+    margin-bottom: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #eadfd9;
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* TÍTULO DEL FORMULARIO */
+
+.cuotas__formulario h2 {
+    margin: 0 -25px 22px;
+    padding: 17px 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff1e9,
+            #fff8f4
+        );
+
+    border-bottom: 1px solid #f1d8ca;
+
+    font-size: 18px;
+}
+
+
+/* CAMPOS */
+
+.cuotas input,
+.cuotas select {
+    min-height: 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe2e4;
+    border-radius: 10px;
+}
+
+
+.cuotas input:hover,
+.cuotas select:hover {
+    border-color: #e9b79f;
+}
+
+
+.cuotas input:focus,
+.cuotas select:focus {
+    border-color: #e9865d;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(233, 134, 93, 0.11);
+
+    outline: none;
+}
+
+
+/* BOTÓN REGISTRAR */
+
+.cuotas button[type="submit"] {
+    min-height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(233, 134, 93, .18);
+}
+
+
+/* ==========================================================
+   PAGOS REGISTRADOS
+   ========================================================== */
+
+.cuotas__listado {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e7;
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.045);
+}
+
+
+/* CABECERA */
+
+.cuotas__listado-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 24px;
+
+    background: #fffaf7;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.cuotas__listado-header h2 {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* BUSCADOR */
+
+.cuotas__listado-header input {
+    width: 320px;
+    max-width: 100%;
+
+    background: white;
+}
+
+
+/* ==========================================================
+   TABLA
+   ========================================================== */
+
+.cuotas table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.cuotas thead {
+    background: #fafafa;
+}
+
+
+.cuotas th {
+    padding: 12px 14px;
+
+    color: #806d63;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: .055em;
+}
+
+
+.cuotas td {
+    padding: 14px;
+
+    border-top: 1px solid #eeeeee;
+
+    font-size: 13px;
+
+    vertical-align: middle;
+}
+
+
+.cuotas tbody tr {
+    transition: background .15s ease;
+}
+
+
+.cuotas tbody tr:hover {
+    background: #fffaf7;
+}
+
+
+/* IMPORTE */
+
+.cuotas td:nth-child(6) {
+    color: #d9673d;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   ESTADO PAGADO
+   ========================================================== */
+
+.cuotas td:nth-child(7) {
+    color: #25835f;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   BOTONES DE LA TABLA
+   ========================================================== */
+
+.cuotas td:last-child {
+    white-space: nowrap;
+}
+
+
+.cuotas td:last-child button {
+    min-height: 34px;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    box-shadow: none;
+}
+
+
+/* RECIBO */
+
+.cuotas td:last-child button:first-child {
+    background: #fff0e8;
+
+    color: #d9673d;
+
+    border: 1px solid #f2cdbb;
+}
+
+
+.cuotas td:last-child button:first-child:hover {
+    background: #fde3d6;
+}
+
+
+/* ANULAR */
+
+.cuotas td:last-child button:last-child {
+    background: #ffffff;
+
+    color: #a54b4b;
+
+    border: 1px solid #e6caca;
+}
+
+
+.cuotas td:last-child button:last-child:hover {
+    background: #fff3f3;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 850px) {
+
+    .cuotas__listado-header {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .cuotas__listado-header input {
+        width: 100%;
+    }
+
+
+    .cuotas__listado {
+        overflow-x: auto;
+    }
+
+
+    .cuotas table {
+        min-width: 850px;
+    }
+
+}

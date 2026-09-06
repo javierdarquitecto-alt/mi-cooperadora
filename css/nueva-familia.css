@@ -1,0 +1,509 @@
+/* ==========================================================
+   MI COOPERADORA
+   NUEVA FAMILIA
+   ========================================================== */
+
+.nueva-familia {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* CABECERA */
+
+.nueva-familia .nueva-familia__header {
+    display: block;
+    margin-bottom: 26px;
+}
+
+.nueva-familia .btn-volver {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 0;
+
+    background: transparent !important;
+    color: #d36f48 !important;
+
+    border: 0;
+    box-shadow: none !important;
+
+    font-size: 13px;
+}
+
+.nueva-familia .btn-volver:hover {
+    background: transparent !important;
+    color: #b85c38 !important;
+    transform: translateX(-3px);
+}
+
+.nueva-familia__eyebrow {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #d36f48;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.nueva-familia__header h1 {
+    margin: 0 0 5px;
+
+    font-size: 30px;
+}
+
+.nueva-familia__header p {
+    margin: 0;
+
+    color: #737a80;
+}
+
+
+/* FORMULARIO GENERAL */
+
+.nueva-familia .nueva-familia__form {
+    display: block !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: 0 !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+}
+
+
+/* TARJETAS */
+
+.nueva-familia .form-card {
+    display: block !important;
+
+    margin: 0 0 20px !important;
+    padding: 24px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e4e6e8 !important;
+
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+
+/* CABECERA DE LAS TARJETAS */
+
+.nueva-familia .form-card__header {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.nueva-familia .form-card__icon {
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    background: #fce9df !important;
+
+    color: #d36f48;
+
+    border-radius: 14px;
+
+    font-size: 20px;
+}
+
+
+.nueva-familia .form-card__header h2 {
+    margin: 0 0 3px;
+
+    font-size: 18px;
+}
+
+
+.nueva-familia .form-card__header p {
+    margin: 0;
+
+    color: #737a80;
+
+    font-size: 13px;
+}
+
+
+/* CAMPOS */
+
+.nueva-familia .form-card .form-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 18px;
+}
+
+
+/* PRIMER BLOQUE: APELLIDO / NOMBRE / DNI */
+
+.nueva-familia .form-card:first-of-type .form-grid {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr)) !important;
+}
+
+
+.nueva-familia .form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.nueva-familia label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.nueva-familia input,
+.nueva-familia textarea {
+    background: #fafafa !important;
+
+    border: 1px solid #dfe2e4;
+
+    border-radius: 10px;
+
+    padding: 11px 12px;
+}
+
+
+.nueva-familia input:focus,
+.nueva-familia textarea:focus {
+    background: white !important;
+
+    border-color: #e9865d;
+
+    box-shadow:
+        0 0 0 3px rgba(233, 134, 93, .12);
+}
+
+
+.nueva-familia textarea {
+    min-height: 110px;
+}
+
+
+/* BOTONES INFERIORES */
+
+.nueva-familia .nueva-familia__actions {
+    display: flex !important;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 5px;
+
+    padding: 14px 0 20px;
+
+    background: transparent !important;
+}
+
+
+.nueva-familia .btn-secundario {
+    background: white !important;
+
+    color: #2d3338 !important;
+
+    border: 1px solid #e4e6e8;
+
+    box-shadow: none;
+}
+
+
+.nueva-familia .btn-secundario:hover {
+    background: #f1f2f3 !important;
+}
+
+
+.nueva-familia .btn-guardar {
+    min-width: 165px;
+
+    background: #e9865d;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 760px) {
+
+    .nueva-familia .form-card .form-grid,
+    .nueva-familia .form-card:first-of-type .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .nueva-familia .form-card {
+        padding: 19px !important;
+    }
+
+    .nueva-familia .nueva-familia__actions {
+        flex-direction: column-reverse;
+    }
+
+    .nueva-familia .nueva-familia__actions button {
+        width: 100%;
+    }
+}
+/* ==========================================================
+   AJUSTE FINO - NUEVA FAMILIA
+   ========================================================== */
+
+.nueva-familia {
+    max-width: 940px;
+}
+
+
+/* Más compacto */
+
+.nueva-familia .form-card {
+    padding: 20px !important;
+    margin-bottom: 14px !important;
+}
+
+
+/* Cabecera de tarjeta más baja */
+
+.nueva-familia .form-card__header {
+    margin-bottom: 16px;
+    padding-bottom: 13px;
+    gap: 12px;
+}
+
+
+.nueva-familia .form-card__icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+
+.nueva-familia .form-card__header h2 {
+    font-size: 16px;
+}
+
+
+.nueva-familia .form-card__header p {
+    font-size: 12px;
+}
+
+
+/* Campos un poco más compactos */
+
+.nueva-familia .form-card .form-grid {
+    gap: 14px;
+}
+
+
+.nueva-familia input,
+.nueva-familia textarea {
+    min-height: 40px;
+    padding: 9px 11px;
+}
+
+
+.nueva-familia textarea {
+    min-height: 90px;
+}
+
+
+/* Títulos generales */
+
+.nueva-familia__header {
+    margin-bottom: 18px !important;
+}
+
+
+.nueva-familia__header h1 {
+    font-size: 28px;
+}
+
+
+.nueva-familia__header p {
+    font-size: 13px;
+}
+
+
+/* Botones inferiores más prolijos */
+
+.nueva-familia .nueva-familia__actions {
+    padding: 10px 0 14px;
+}
+
+
+.nueva-familia .nueva-familia__actions button {
+    min-height: 40px;
+}
+/* ==========================================================
+   NUEVA FAMILIA - TARJETAS CON CABECERA
+   ========================================================== */
+
+/* Espacio correcto debajo de la barra superior */
+
+.nueva-familia {
+    padding-top: 10px;
+}
+
+
+/* TARJETAS */
+
+.nueva-familia .form-card {
+    padding: 0 20px 20px !important;
+
+    overflow: hidden;
+
+    background: #ffffff !important;
+
+    border: 1px solid #eadfd9 !important;
+
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.055) !important;
+}
+
+
+/* CABECERA DURAZNO DE CADA TARJETA */
+
+.nueva-familia .form-card__header {
+    margin:
+        0 -20px 18px !important;
+
+    padding:
+        15px 20px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff1e9,
+            #fff8f4
+        );
+
+    border-bottom:
+        1px solid #f1d8ca !important;
+}
+
+
+/* ICONO */
+
+.nueva-familia .form-card__icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    flex:
+        0 0 42px !important;
+
+    background:
+        #ffffff !important;
+
+    border:
+        1px solid #f0c9b5;
+
+    color:
+        #df7146;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+
+/* TÍTULOS */
+
+.nueva-familia .form-card__header h2 {
+    font-size: 16px;
+    color: #2d3338;
+}
+
+
+.nueva-familia .form-card__header p {
+    color: #81736b;
+}
+
+
+/* CAMPOS */
+
+.nueva-familia input,
+.nueva-familia textarea {
+    background:
+        #ffffff !important;
+
+    border:
+        1px solid #dfe1e3 !important;
+}
+
+
+.nueva-familia input:hover,
+.nueva-familia textarea:hover {
+    border-color:
+        #e9b79f !important;
+}
+
+
+/* FOCO */
+
+.nueva-familia input:focus,
+.nueva-familia textarea:focus {
+    border-color:
+        #e9865d !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(233, 134, 93, 0.11) !important;
+}
+
+
+/* MÁS DIFERENCIA ENTRE TARJETAS */
+
+.nueva-familia .form-card + .form-card {
+    margin-top:
+        16px !important;
+}
+
+
+/* BOTÓN GUARDAR */
+
+.nueva-familia .btn-guardar {
+    padding:
+        11px 22px;
+
+    border-radius:
+        11px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(233, 134, 93, 0.20);
+}

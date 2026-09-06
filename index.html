@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Mi Cooperadora
+    </title>
+
+
+    <!-- ================================================== -->
+    <!-- PWA -->
+    <!-- ================================================== -->
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <meta
+        name="theme-color"
+        content="#f2a36b"
+    >
+
+
+    <!-- ================================================== -->
+    <!-- CSS -->
+    <!-- ================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/nueva-familia.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/ficha-familia.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/cuotas.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/caja.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/reportes.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/nuevo-alumno.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/configuracion.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/ventas.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/sorteos.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================================================== -->
+    <!-- LOADER -->
+    <!-- ================================================== -->
+
+    <div
+        id="loader"
+        class="loader"
+    >
+
+        <div class="loader__content">
+
+            <div class="loader__spinner"></div>
+
+            <p>
+                Cargando Mi Cooperadora...
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <header class="app-header">
+
+        <div class="app-header__brand">
+
+            <div class="app-header__logo">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Mi Cooperadora"
+                >
+
+            </div>
+
+            <strong>
+                Mi Cooperadora
+            </strong>
+
+            <span>
+                Gestión escolar
+            </span>
+
+        </div>
+
+
+        <nav class="app-nav">
+
+            <button
+                type="button"
+                data-route="dashboard"
+            >
+                Inicio
+            </button>
+
+            <button
+                type="button"
+                data-route="familias"
+            >
+                Familias
+            </button>
+
+            <button
+                type="button"
+                data-route="cuotas"
+            >
+                Cuotas
+            </button>
+
+            <button
+                type="button"
+                data-route="caja"
+            >
+                Caja
+            </button>
+
+            <button
+                type="button"
+                data-route="reportes"
+            >
+                Reportes
+            </button>
+
+            <button
+                type="button"
+                data-route="configuracion"
+            >
+                Configuración
+            </button>
+
+            <button
+                type="button"
+                data-route="ventas"
+            >
+                Ventas
+            </button>
+
+            <button
+                type="button"
+                data-route="sorteos"
+            >
+                Sorteos
+            </button>
+
+            <button
+                type="button"
+                id="btnCerrarSesion"
+            >
+                Cerrar sesión
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================================================== -->
+    <!-- APLICACIÓN -->
+    <!-- ================================================== -->
+
+    <main
+        id="app"
+        style="display: none;"
+    >
+    </main>
+
+
+    <!-- ================================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/database.js"></script>
+
+    <script src="js/utils.js"></script>
+
+    <script src="js/router.js"></script>
+
+
+    <!-- ================================================== -->
+    <!-- SERVICES -->
+    <!-- ================================================== -->
+
+    <script src="js/services/familias.service.js"></script>
+
+    <script src="js/services/cuotas.service.js"></script>
+
+    <script src="js/services/cobranzas.service.js"></script>
+
+
+    <!-- ================================================== -->
+    <!-- APP -->
+    <!-- ================================================== -->
+
+    <script src="js/app.js"></script>
+
+
+    <!-- ================================================== -->
+    <!-- SERVICE WORKER -->
+    <!-- ================================================== -->
+
+    <script>
+
+        if ("serviceWorker" in navigator) {
+
+            window.addEventListener(
+                "load",
+                () => {
+
+                    navigator.serviceWorker
+                        .register("./sw.js")
+                        .then(registro => {
+
+                            console.log(
+                                "Service Worker registrado:",
+                                registro.scope
+                            );
+
+                        })
+                        .catch(error => {
+
+                            console.error(
+                                "Error al registrar Service Worker:",
+                                error
+                            );
+
+                        });
+
+                }
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

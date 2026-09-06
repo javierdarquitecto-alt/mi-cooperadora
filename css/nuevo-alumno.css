@@ -1,0 +1,224 @@
+/* ==========================================================
+   MI COOPERADORA
+   NUEVO ALUMNO
+   ========================================================== */
+
+.nuevo-alumno {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* CABECERA */
+
+.nuevo-alumno__header {
+    margin-bottom: 24px;
+}
+
+.nuevo-alumno .btn-volver {
+    display: inline-block;
+
+    margin: 0 0 18px;
+    padding: 0;
+
+    background: transparent !important;
+    color: #d36f48 !important;
+
+    border: 0;
+    box-shadow: none !important;
+
+    font-size: 13px;
+}
+
+.nuevo-alumno .btn-volver:hover {
+    background: transparent !important;
+    color: #b85c38 !important;
+
+    transform: translateX(-3px);
+}
+
+.nuevo-alumno__eyebrow {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #d36f48;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.nuevo-alumno__header h1 {
+    margin: 0 0 6px;
+
+    font-size: 29px;
+}
+
+.nuevo-alumno__header p {
+    margin: 0;
+
+    color: #737a80;
+}
+
+
+/* FORMULARIO */
+
+.nuevo-alumno__form {
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* TARJETA */
+
+.nuevo-alumno .form-card {
+    overflow: hidden;
+
+    margin-bottom: 18px !important;
+    padding: 0 22px 22px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #eadfd9 !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,.05) !important;
+}
+
+
+/* CABECERA DE TARJETA */
+
+.nuevo-alumno .form-card__header {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 0 -22px 20px !important;
+    padding: 16px 22px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff1e9,
+            #fff8f4
+        );
+
+    border-bottom:
+        1px solid #f1d8ca !important;
+}
+
+.nuevo-alumno .form-card__icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    background: white;
+
+    border: 1px solid #f0c9b5;
+    border-radius: 13px;
+
+    font-size: 20px;
+}
+
+.nuevo-alumno .form-card__header h2 {
+    margin: 0 0 3px;
+
+    font-size: 17px;
+}
+
+.nuevo-alumno .form-card__header p {
+    margin: 0;
+
+    color: #7a7775;
+
+    font-size: 12px;
+}
+
+
+/* CAMPOS */
+
+.nuevo-alumno .form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.nuevo-alumno input {
+    min-height: 42px;
+
+    background: white;
+
+    border: 1px solid #dfe2e4;
+    border-radius: 10px;
+}
+
+.nuevo-alumno input:focus {
+    border-color: #e9865d;
+
+    box-shadow:
+        0 0 0 3px rgba(233,134,93,.11);
+}
+
+
+/* ACCIONES */
+
+.nuevo-alumno__actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-bottom: 20px;
+}
+
+.nuevo-alumno__actions .btn-secundario {
+    background: white !important;
+
+    color: #2d3338 !important;
+
+    border: 1px solid #e4e6e8;
+
+    box-shadow: none;
+}
+
+.nuevo-alumno__actions .btn-secundario:hover {
+    background: #f1f2f3 !important;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .nuevo-alumno .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nuevo-alumno__actions {
+        flex-direction: column-reverse;
+    }
+
+    .nuevo-alumno__actions button {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,472 @@
+/* ==========================================================
+   MI COOPERADORA
+   REPORTES - DISEÑO FINAL
+   ========================================================== */
+
+.reportes {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   FILTRO DE PERÍODO
+   ========================================================== */
+
+.reportes__filtros {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+
+    margin: 26px 0 22px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e7;
+    border-radius: 16px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.04);
+}
+
+
+.reportes__filtros .form-group {
+    width: 215px;
+}
+
+
+.reportes__filtros label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #252b30;
+}
+
+
+.reportes__filtros input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe2e4;
+    border-radius: 10px;
+}
+
+
+.reportes__filtros input:focus {
+    outline: none;
+
+    border-color: #ed855d;
+
+    box-shadow:
+        0 0 0 3px rgba(237,133,93,.10);
+}
+
+
+#actualizar-reporte {
+    height: 44px;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 10px rgba(237,133,93,.15);
+}
+
+
+/* ==========================================================
+   TARJETAS GENERALES
+   ========================================================== */
+
+.reportes__cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+
+.reporte-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 112px;
+
+    padding: 23px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e7;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.045);
+}
+
+
+.reporte-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #ed855d;
+}
+
+
+.reporte-card span {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: #70777d;
+
+    font-size: 13px;
+}
+
+
+.reporte-card strong {
+    display: block;
+
+    color: #20262b;
+
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+
+/* Familias */
+
+.reporte-card:nth-child(1)::before {
+    background: #e9a36e;
+}
+
+
+/* Alumnos */
+
+.reporte-card:nth-child(2)::before {
+    background: #d99c73;
+}
+
+
+/* Total cobrado */
+
+.reporte-card:nth-child(3)::before {
+    background: #62b58c;
+}
+
+.reporte-card:nth-child(3) strong {
+    color: #27815d;
+}
+
+
+/* Saldo */
+
+.reporte-card:nth-child(4) {
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f2,
+            #ffffff
+        );
+
+    border-color: #efd4c6;
+}
+
+.reporte-card:nth-child(4)::before {
+    background: #ed855d;
+}
+
+.reporte-card:nth-child(4) strong {
+    color: #db6c42;
+}
+
+
+/* ==========================================================
+   BLOQUES GENERALES
+   ========================================================== */
+
+.reportes__periodo,
+.reportes__medios,
+.reportes__informacion {
+    margin-bottom: 22px;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e7;
+    border-radius: 17px;
+
+    box-shadow:
+        0 3px 11px rgba(0,0,0,.04);
+}
+
+
+.reportes__periodo h2,
+.reportes__medios h2,
+.reportes__informacion h2 {
+    margin: 0 0 20px;
+
+    color: #20262b;
+
+    font-size: 19px;
+}
+
+
+/* ==========================================================
+   RESUMEN DEL PERÍODO
+   ========================================================== */
+
+.reportes__periodo-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.reportes__periodo-grid > div {
+    padding: 18px;
+
+    background: #fff3ec;
+
+    border: 1px solid #f3ded2;
+    border-radius: 12px;
+}
+
+
+.reportes__periodo-grid span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #6e6e6e;
+
+    font-size: 13px;
+}
+
+
+.reportes__periodo-grid strong {
+    color: #dc7047;
+
+    font-size: 21px;
+}
+
+
+/* ==========================================================
+   MEDIOS DE PAGO
+   ========================================================== */
+
+#reporte-medios {
+    overflow: hidden;
+
+    border: 1px solid #e1e3e5;
+    border-radius: 12px;
+}
+
+
+#reporte-medios table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+#reporte-medios thead {
+    background: #f6f6f6;
+}
+
+
+#reporte-medios th {
+    padding: 13px 14px;
+
+    color: #756c67;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: .04em;
+}
+
+
+#reporte-medios td {
+    padding: 14px;
+
+    border-top: 1px solid #eeeeee;
+
+    font-size: 13px;
+}
+
+
+#reporte-medios td:last-child {
+    color: #27815d;
+
+    font-weight: 700;
+}
+
+
+#reporte-medios tbody tr:hover {
+    background: #fffaf7;
+}
+
+
+/* ==========================================================
+   INFORMACIÓN GENERAL
+   ========================================================== */
+
+.reporte-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+
+.reporte-info p {
+    margin: 0;
+
+    padding: 16px;
+
+    background: #fafafa;
+
+    border: 1px solid #ececec;
+    border-radius: 11px;
+
+    color: #62686d;
+
+    font-size: 13px;
+}
+
+
+.reporte-info strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #30363b;
+
+    font-size: 12px;
+}
+
+
+/* El total histórico */
+
+.reporte-info p:last-child {
+    background: #fff5ef;
+
+    border-color: #f1d7ca;
+}
+
+
+.reporte-info p:last-child strong {
+    color: #dc7047;
+}
+
+
+/* ==========================================================
+   ACCIONES
+   ========================================================== */
+
+.reportes__acciones {
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding: 4px 0 30px;
+}
+
+
+#imprimir-reporte {
+    min-height: 43px;
+
+    padding: 0 21px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(237,133,93,.17);
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .reportes__cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .reporte-info {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .reportes__filtros {
+        display: block;
+    }
+
+
+    .reportes__filtros .form-group {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+
+    #actualizar-reporte {
+        width: 100%;
+    }
+
+
+    .reportes__cards,
+    .reportes__periodo-grid,
+    .reporte-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    #reporte-medios {
+        overflow-x: auto;
+    }
+
+
+    #reporte-medios table {
+        min-width: 550px;
+    }
+
+}

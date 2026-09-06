@@ -1,0 +1,23 @@
+{
+  "name": "Mi Cooperadora",
+  "short_name": "Cooperadora",
+  "description": "Aplicación para la gestión de la cooperadora escolar.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff7f2",
+  "theme_color": "#f2a36b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

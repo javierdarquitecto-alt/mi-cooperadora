@@ -1,0 +1,41 @@
+:root{
+
+    --color-primario:#F28C52;
+    --color-secundario:#F6F6F6;
+    --color-exito:#2E7D32;
+    --color-error:#C62828;
+    --color-texto:#333333;
+    --color-borde:#DDDDDD;
+
+    --radio:14px;
+
+    --sombra:0 4px 12px rgba(0,0,0,.08);
+
+    --transicion:.25s;
+
+    --fuente:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+}
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:var(--color-secundario);
+
+    color:var(--color-texto);
+
+    font-family:var(--fuente);
+
+}
