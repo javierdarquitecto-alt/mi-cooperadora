@@ -3040,3 +3040,103 @@ tbody tr:hover {
         width: 100%;
     }
 }
+/* ==========================================================
+   LOGIN
+   ========================================================== */
+
+.login {
+    min-height: calc(100vh - 74px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px 16px;
+}
+
+
+.login__card {
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 32px;
+
+    background: white;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow-md);
+
+    text-align: center;
+}
+
+
+.login__logo {
+    display: block;
+
+    width: 120px;
+
+    height: 120px;
+
+    margin: 0 auto 20px;
+
+    object-fit: contain;
+}
+
+
+.login__card h1 {
+    margin-bottom: 6px;
+}
+
+
+.login__card > p {
+    margin-top: 0;
+
+    margin-bottom: 24px;
+}
+
+
+.login__card form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    text-align: left;
+}
+
+
+.login__card form button {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+
+#loginError {
+    margin-top: 16px;
+
+    color: var(--color-danger);
+
+    font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+
+    .login__card {
+        padding: 24px 20px;
+    }
+
+    .login__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+}
